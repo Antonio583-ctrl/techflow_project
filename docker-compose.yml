@@ -1,0 +1,31 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: techflow_postgres
+    environment:
+      - POSTGRES_USER=odoo
+      - POSTGRES_PASSWORD=odoo123
+      - POSTGRES_DB=postgres
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  odoo:
+    image: odoo:18
+    container_name: techflow_odoo
+    depends_on:
+      - postgres
+    ports:
+      - "8069:8069"
+    environment:
+      - HOST=postgres
+      - USER=odoo
+      - PASSWORD=odoo123
+    volumes:
+      - ./addons:/mnt/extra-addons
+      - ./odoo.conf:/etc/odoo/odoo.conf
+
+volumes:
+  postgres_data:

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_tech_root" 
+              name="Activos IT" 
+              sequence="10"/>
+
+    <menuitem id="menu_tech_equipment" 
+              name="Equipos" 
+              parent="menu_tech_root"
+              action="action_tech_equipment"
+              sequence="10"/>
+
+    <menuitem id="menu_tech_config" 
+              name="Configuración" 
+              parent="menu_tech_root"
+              sequence="20"/>
+
+    <menuitem id="menu_tech_category" 
+              name="Categorías" 
+              parent="menu_tech_config"
+              action="action_tech_category"
+              sequence="10"
+              groups="tech_inventory.group_tech_manager,base.group_system"/>
+</odoo>
