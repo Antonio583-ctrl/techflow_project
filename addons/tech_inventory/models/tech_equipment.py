@@ -54,6 +54,12 @@ class TechEquipment(models.Model):
     notes = fields.Text(string='Notas Adicionales')
     purchase_date = fields.Date(string='Fecha de Compra')
     
+    rating_ids = fields.One2many(
+        'tech.rating',
+        'equipment_id',
+        string='Valoraciones'
+    )
+    
     _sql_constraints = [
         ('serial_unique', 'unique(serial)', 'El número de serie debe ser único!')
     ]

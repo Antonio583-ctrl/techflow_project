@@ -15,6 +15,12 @@
               parent="menu_tech_root"
               sequence="20"/>
 
+    <menuitem id="menu_tech_rating" 
+              name="Valoraciones" 
+              parent="menu_tech_config"
+              action="action_tech_rating"
+              sequence="5"/>
+
     <menuitem id="menu_tech_category" 
               name="Categorías" 
               parent="menu_tech_config"

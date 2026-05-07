@@ -68,6 +68,10 @@
                                 ⚠️ Este equipo está en reparación, no puede ser asignado temporalmente.
                             </div>
                         </page>
+
+                        <page string="Valoraciones">
+                            <field name="rating_ids"/>
+                        </page>
                     </notebook>
                 </sheet>
             </form>
