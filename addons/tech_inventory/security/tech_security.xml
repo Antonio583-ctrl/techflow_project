@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <record id="module_category_tech_inventory" model="ir.module.category">
+        <field name="name">Tech Inventory</field>
+        <field name="description">Categoría para roles de gestión de equipos tecnológicos.</field>
+    </record>
+
     <record id="group_tech_user" model="res.groups">
         <field name="name">Usuario IT</field>
-        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="category_id" ref="module_category_tech_inventory"/>
     </record>
 
     <record id="group_tech_valorador" model="res.groups">
         <field name="name">Valorador</field>
-        <field name="category_id" ref="base.module_category_hidden"/>
+        <field name="category_id" ref="module_category_tech_inventory"/>
     </record>
 
     <record id="group_tech_manager" model="res.groups">
