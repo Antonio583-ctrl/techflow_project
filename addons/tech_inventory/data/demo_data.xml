@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
+
         <record id="category_laptop" model="tech.category">
             <field name="name">Laptops</field>
             <field name="description">Computadoras portátiles para trabajo móvil</field>
@@ -47,5 +48,40 @@
             <field name="cost">3500.00</field>
             <field name="purchase_date">2023-11-20</field>
         </record>
+
+        <!-- Nueva categoría: Monitores -->
+        <record id="category_monitors" model="tech.category">
+            <field name="name">Monitores</field>
+            <field name="description">Pantallas y monitores para computadoras</field>
+        </record>
+
+        <!-- Tres equipos adicionales para categorías faltantes/incluyendo nueva -->
+        <record id="equipment_monitor_dell" model="tech.equipment">
+            <field name="name">Dell UltraSharp 27</field>
+            <field name="serial">DELL-MON-12345678</field>
+            <field name="category_id" ref="category_monitors"/>
+            <field name="state">available</field>
+            <field name="cost">400.00</field>
+            <field name="purchase_date">2024-03-01</field>
+        </record>
+
+        <record id="equipment_mouse_logitech" model="tech.equipment">
+            <field name="name">Logitech MX Master 3S</field>
+            <field name="serial">LOGI-MOUSE-87654321</field>
+            <field name="category_id" ref="category_peripheral"/>
+            <field name="state">available</field>
+            <field name="cost">100.00</field>
+            <field name="purchase_date">2024-03-05</field>
+        </record>
+
+        <record id="equipment_tablet_lenovo" model="tech.equipment">
+            <field name="name">Lenovo Tab M10</field>
+            <field name="serial">LEN-TAB-11223344</field>
+            <field name="category_id" ref="category_tablet"/>
+            <field name="state">available</field>
+            <field name="cost">250.00</field>
+            <field name="purchase_date">2024-03-10</field>
+        </record>
+
     </data>
 </odoo>

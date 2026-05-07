@@ -10,11 +10,8 @@
                   decoration-success="state == 'available'"
                   decoration-info="state == 'assigned'">
                 <field name="name"/>
-                <field name="serial"/>
-                <field name="category_id"/>
                 <field name="state" widget="badge"/>
-                <field name="employee_id"/>
-                <field name="cost" widget="monetary"/>
+                <field name="category_id"/>
             </list>
         </field>
     </record>
@@ -25,6 +22,12 @@
         <field name="arch" type="xml">
             <form string="Equipo">
                 <header>
+                    <button name="action_set_available" string="Disponible" type="object" 
+                            invisible="state == 'available'" class="btn-primary"/>
+                    <button name="action_set_repair" string="En Reparación" type="object" 
+                            invisible="state not in ('available', 'assigned')" class="btn-warning"/>
+                    <button name="action_set_decommissioned" string="Desincorporado" type="object" 
+                            invisible="state == 'decommissioned'" class="btn-danger"/>
                     <field name="state" widget="statusbar" statusbar_visible="available,assigned,repair,decommissioned"/>
                 </header>
                 <sheet>
@@ -38,7 +41,7 @@
                         <page string="Datos Técnicos">
                             <group>
                                 <group>
-                                    <field name="category_id"/>
+                                    <field name="category_id" options="{'no_create': True, 'no_open': True}"/>
                                     <field name="serial"/>
                                     <field name="purchase_date"/>
                                 </group>
@@ -57,10 +60,11 @@
                             <group>
                                 <field name="employee_id" 
                                        placeholder="Empleado asignado..."
+                                       readonly="state in ('repair', 'decommissioned')"
                                        />
                                 <field name="state" invisible="1"/>
                             </group>
-                            <div class="alert alert-warning" role="alert" >
+                            <div class="alert alert-warning" role="alert" invisible="state != 'repair'">
                                 ⚠️ Este equipo está en reparación, no puede ser asignado temporalmente.
                             </div>
                         </page>

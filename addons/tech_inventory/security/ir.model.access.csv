@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_tech_category_user,tech.category.user,model_tech_category,tech_inventory.group_tech_user,1,0,0,0
+access_tech_category_user,tech.category.user,model_tech_category,tech_inventory.group_tech_user,0,0,0,0
 access_tech_category_manager,tech.category.manager,model_tech_category,tech_inventory.group_tech_manager,1,1,1,1
-access_tech_equipment_user,tech.equipment.user,model_tech_equipment,tech_inventory.group_tech_user,1,1,1,0
+access_tech_equipment_user,tech.equipment.user,model_tech_equipment,tech_inventory.group_tech_user,1,1,0,0
 access_tech_equipment_manager,tech.equipment.manager,model_tech_equipment,tech_inventory.group_tech_manager,1,1,1,1
 access_tech_equipment_admin,tech.equipment.admin,model_tech_equipment,base.group_system,1,1,1,1
 access_tech_category_admin,tech.category.admin,model_tech_category,base.group_system,1,1,1,1
