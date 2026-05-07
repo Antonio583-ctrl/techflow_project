@@ -42,6 +42,7 @@ class TechEquipment(models.Model):
     
     tax_value = fields.Monetary(
         string='Valor con Impuesto (15%)',
+        compute='_compute_tax_value',
         store=True,
         currency_field='currency_id'
     )
