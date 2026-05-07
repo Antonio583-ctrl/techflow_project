@@ -75,9 +75,9 @@
         </record>
 
         <record id="equipment_tablet_lenovo" model="tech.equipment">
-            <field name="name">Lenovo Tab M10</field>
-            <field name="serial">LEN-TAB-11223344</field>
-            <field name="category_id" ref="category_tablet"/>
+            <field name="name">Lenovo M10</field>
+            <field name="serial">LEN-11223344</field>
+            <field name="category_id" ref="category_laptop"/>
             <field name="state">available</field>
             <field name="cost">250.00</field>
             <field name="purchase_date">2024-03-10</field>
