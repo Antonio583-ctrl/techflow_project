@@ -15,6 +15,7 @@
         'security/ir.model.access.csv',
         'views/tech_category_views.xml',
         'views/tech_equipment_views.xml',
+        'views/tech_rating_views.xml',
         'views/menus.xml',
         'data/demo_data.xml',
     ],
