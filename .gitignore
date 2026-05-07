@@ -1,0 +1,15 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Odoo temporary files
+*.log
+*.lock
+
+# Env and IDE
+.env
+.venv
+venv/
+.idea/
+.vscode/
